@@ -1,6 +1,6 @@
 # real-world-vue
 
-## Following along?
+## Following along
 
 We encourage you to follow the course on Vue Mastery, and code along with us. This course has tags representing the start and finish of each level, just in case you get stuck. Here's the start and ending code of each lesson, if you'd like to download them.
 
@@ -17,24 +17,36 @@ We encourage you to follow the course on Vue Mastery, and code along with us. Th
 
 ## Project setup
 
-```
+```shell
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 
-```
+```shell
 npm run serve
 ```
 
 ### Compiles and minifies for production
 
-```
+```shell
 npm run build
 ```
 
 ### Lints and fixes files
 
-```
+```shell
 npm run lint
+```
+
+### Runs `json-server` for API
+
+```shell
+npm run api
+```
+
+### Runs `serve` and `api`
+
+```shell
+npm run stack
 ```

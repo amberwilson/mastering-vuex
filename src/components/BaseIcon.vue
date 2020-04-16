@@ -1,29 +1,36 @@
 <template>
-    <div class="icon-wrapper">
-      <svg class='icon' :width="width" :height="height">
-        <use v-bind="{'xlink:href':'/feather-sprite.svg#' + name}"/>
-      </svg>
-      <slot></slot>
-    </div>
+  <div class="icon-wrapper">
+    <svg
+      class="icon"
+      :width="width"
+      :height="height"
+    >
+      <use v-bind="{ 'xlink:href': '/feather-sprite.svg#' + name }" />
+    </svg>
+    <slot />
+  </div>
 </template>
-    
+
 <script>
 export default {
   name: 'Icon',
   props: {
-    name: String,
+    name: {
+      type: String,
+      default: '',
+    },
     width: {
       type: [Number, String],
-      default: 24
+      default: 24,
     },
     height: {
       type: [Number, String],
-      default: 24
-    }
-  }
-}
+      default: 24,
+    },
+  },
+};
 </script>
-    
+
 <style scoped>
 .icon-wrapper {
   display: inline-flex;
