@@ -1,4 +1,4 @@
-# real-world-vue
+# mastering-vuex
 
 ## About
 Exercise work for Vue Mastery's [Mastering Vue](https://www.vuemastery.com/courses/mastering-vuex) course.
