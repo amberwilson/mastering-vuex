@@ -1,7 +1,7 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'event-show', params: { id: event.id } }"
+    :to="{ name: Routes.EventShow, params: { id: event.id } }"
   >
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
@@ -16,12 +16,19 @@
 </template>
 
 <script>
+import Routes from '@/routes';
+
 export default {
   props: {
     event: {
       type: Object,
       default: () => {},
     },
+  },
+  data() {
+    return {
+      Routes,
+    };
   },
 };
 </script>
