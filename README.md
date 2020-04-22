@@ -1,5 +1,40 @@
 # real-world-vue
 
+## About
+Exercise work for Vue Mastery's [Mastering Vue](https://www.vuemastery.com/courses/mastering-vuex) course.
+
+## Project setup
+First pull down the https://github.com/amberwilson/mastering-vuex-api repo - it's the JSON Server needed to run the backend and spins up with the `npm run stack` command.
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Runs `json-server` for API
+```
+npm run api
+```
+
+### Runs `serve` and `api`
+```
+npm run stack
+```
+
 ## Following along
 
 We encourage you to follow the course on Vue Mastery, and code along with us. This course has tags representing the start and finish of each level, just in case you get stuck. Here's the start and ending code of each lesson, if you'd like to download them.
