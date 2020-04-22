@@ -11,25 +11,15 @@
 
 <script>
 import EventCard from '@/components/EventCard.vue';
-import EventService from '@/services/EventService';
 
 export default {
   components: {
     EventCard,
   },
-  data() {
-    return {
-      events: [],
-    };
-  },
-  created() {
-    EventService.getEvents()
-      .then((response) => {
-        this.events = response.data;
-      })
-      .catch((error) => {
-        console.log('There was an error:', error.response);
-      });
+  computed: {
+    events() {
+      return this.$store.state.events;
+    },
   },
 };
 </script>
