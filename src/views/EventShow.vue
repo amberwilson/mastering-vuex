@@ -5,7 +5,7 @@
       <h1 class="title">
         {{ event.title }}
       </h1>
-      <h5>Organized by {{ event.organizer }}</h5>
+      <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
       <h5>Category: {{ event.category }}</h5>
     </div>
 
@@ -56,7 +56,7 @@ export default {
         this.event = response.data;
       })
       .catch((error) => {
-        console.log('There was an error:', error.response);
+        console.error('There was an error:', error.response);
       });
   },
 };
