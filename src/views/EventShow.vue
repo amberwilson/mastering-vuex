@@ -36,7 +36,8 @@
   </div>
 </template>
 <script>
-import EventService from '@/services/EventService';
+import { Actions, Stored } from '@/store';
+import { mapState } from 'vuex';
 
 export default {
   props: {
@@ -45,20 +46,10 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      event: {},
-    };
-  },
   created() {
-    EventService.getEvent(this.id)
-      .then((response) => {
-        this.event = response.data;
-      })
-      .catch((error) => {
-        console.error('There was an error:', error.response);
-      });
+    this.$store.dispatch(Actions.fetchEvent, { id: this.id });
   },
+  computed: mapState([Stored.event]),
 };
 </script>
 <style scoped>

@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <NavBar />
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
-import { Actions } from '@/store';
 
 export default {
-  created() {
-    this.$store.dispatch(Actions.hydrateStore);
-  },
   components: {
     NavBar,
   },
