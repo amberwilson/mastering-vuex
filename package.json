@@ -10,7 +10,7 @@
     "stack": "npm run serve & npm run api"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "lodash": "^4.17.15",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
